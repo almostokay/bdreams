@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Guide's PhD Studio 🌤️ — Bhumika's Complete Journey</title>
+<style>
+:root{
+  --lav:#f0e7ff; --lav2:#d6c2ff;
+  --mint:#e3fbf0; --mint2:#a7ecc9;
+  --peach:#fff0e0; --peach2:#ffcf9e;
+  --sky:#e6f4ff; --sky2:#b7ddff;
+  --pink:#ffe9f2; --pink2:#ffb8d6;
+  --butter:#fff9db; --butter2:#ffe98a;
+  --ink:#3a3552; --inks:#6f6a8f;
+  --card:#ffffffd9; --rad:24px;
+  --shadow:0 12px 32px rgba(130,110,190,.16);
+}
+*{box-sizing:border-box;}
+body{margin:0;font-family:'Segoe UI',system-ui,Roboto,sans-serif;color:var(--ink);
+  background:linear-gradient(150deg,#fff7fb,#f0f9ff 45%,#fffaf0);min-height:100vh;overflow-x:hidden;}
+.blob{position:fixed;border-radius:50%;opacity:.55;filter:blur(1px);z-index:0;animation:drift 15s ease-in-out infinite;}
+.b1{width:200px;height:200px;background:var(--peach2);top:-40px;left:-60px;animation-duration:17s;}
+.b2{width:140px;height:140px;background:var(--sky2);top:55%;right:-50px;animation-duration:13s;}
+.b3{width:100px;height:100px;background:var(--mint2);bottom:0;left:8%;animation-duration:19s;}
+.b4{width:70px;height:70px;background:var(--pink2);top:15%;right:18%;animation-duration:11s;}
+.b5{width:60px;height:60px;background:var(--butter2);bottom:12%;right:30%;animation-duration:15s;}
+@keyframes drift{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(25px,-25px) scale(1.1);}}
+
+header{position:relative;z-index:2;text-align:center;padding:52px 18px 20px;}
+header h1{font-size:2.5rem;margin:0;font-weight:800;
+  background:linear-gradient(90deg,#8a6fd0,#e0729e,#f2a65a,#5fb98a);
+  background-size:300% auto; -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shine 6s linear infinite;}
+@keyframes shine{to{background-position:300% center;}}
+header p{max-width:700px;margin:10px auto 0;color:var(--inks);font-size:1.05rem;}
+.badges{display:flex;gap:9px;flex-wrap:wrap;justify-content:center;margin-top:16px;}
+.badge{background:var(--card);padding:6px 14px;border-radius:999px;font-size:.8rem;box-shadow:var(--shadow);color:var(--inks);}
+
+nav{position:sticky;top:0;z-index:60;display:flex;gap:7px;flex-wrap:wrap;justify-content:center;
+  padding:10px 14px;background:#fffffff2;backdrop-filter:blur(6px);border-bottom:2px dashed var(--lav2);}
+nav button{border:none;padding:8px 15px;border-radius:999px;font-weight:700;font-size:.82rem;cursor:pointer;
+  background:var(--lav);color:var(--ink);transition:.2s;}
+nav button:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+nav button.active{background:linear-gradient(90deg,#d6c2ff,#ffb8d6);box-shadow:var(--shadow);}
+
+main{position:relative;z-index:2;max-width:1080px;margin:0 auto;padding:26px 16px 90px;}
+.panel{display:none;animation:pop .35s ease;}
+.panel.active{display:block;}
+@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.99);}to{opacity:1;transform:translateY(0) scale(1);}}
+
+.card{background:var(--card);border-radius:var(--rad);box-shadow:var(--shadow);padding:24px 26px;margin-bottom:20px;
+  border:1px solid #ffffff90;}
+.card h2{margin-top:0;}
+.tag{display:inline-block;padding:4px 13px;border-radius:999px;font-size:.72rem;font-weight:800;
+  letter-spacing:.4px;text-transform:uppercase;margin-bottom:10px;}
+.t-lav{background:var(--lav);color:#6a4fb0;} .t-mint{background:var(--mint);color:#1f8a58;}
+.t-peach{background:var(--peach);color:#c26a1a;} .t-sky{background:var(--sky);color:#1c6fae;}
+.t-pink{background:var(--pink);color:#c23a72;} .t-butter{background:var(--butter);color:#a3800a;}
+
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem;}
+th,td{padding:9px 10px;border-bottom:1px solid #eee0fa;text-align:left;vertical-align:top;}
+th{background:var(--lav);color:#5c4a90;}
+tr:nth-child(even){background:#faf6ff;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+@media(max-width:720px){.grid2,.grid3{grid-template-columns:1fr;}}
+.mini{background:linear-gradient(160deg,#fff,#faf5ff);border:1px solid #eee0fb;border-radius:16px;padding:15px;
+  transition:transform .2s;}
+.mini:hover{transform:translateY(-4px);}
+.mini h4{margin:0 0 6px;color:#8a6fd0;}
+
+a.btn{display:inline-block;margin-top:8px;padding:6px 13px;border-radius:999px;background:var(--sky);
+  color:#1c6fae;text-decoration:none;font-size:.8rem;font-weight:700;}
+a.btn:hover{background:var(--sky2);}
+
+.diagram{background:#2c2748;color:#ece5ff;border-radius:16px;padding:18px;font-family:'Courier New',monospace;
+  font-size:.76rem;overflow-x:auto;white-space:pre;line-height:1.4;}
+
+.callout{border-left:5px solid var(--peach2);background:var(--peach);padding:14px 18px;border-radius:12px;margin:15px 0;font-size:.92rem;}
+.callout.warn{border-left-color:#e07070;background:#ffe3e3;}
+.callout.tip{border-left-color:var(--mint2);background:var(--mint);}
+.callout.quote{border-left-color:var(--sky2);background:var(--sky);font-style:italic;}
+.callout.me{border-left-color:var(--pink2);background:var(--pink);}
+
+.checklist{list-style:none;padding:0;}
+.checklist li{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:14px;margin-bottom:8px;
+  background:#faf7ff;cursor:pointer;border:1px solid #eee0fb;transition:.2s;}
+.checklist li:hover{background:var(--lav);}
+.checklist li.done{background:var(--mint);text-decoration:line-through;color:#5a9c7c;}
+.progress-wrap{background:#eee0fb;border-radius:999px;height:16px;overflow:hidden;margin:10px 0 4px;}
+.progress-bar{height:100%;width:0;background:linear-gradient(90deg,#d6c2ff,#ffb8d6,#ffcf9e,#a7ecc9);
+  background-size:300% auto;animation:barshine 4s linear infinite;transition:width .4s;border-radius:999px;}
+@keyframes barshine{to{background-position:300% center;}}
+.plabel{font-size:.85rem;color:var(--inks);text-align:right;}
+
+.timeline{position:relative;margin-left:14px;padding-left:26px;border-left:3px dashed var(--lav2);}
+.tstep{margin-bottom:20px;position:relative;}
+.tstep::before{content:"✨";position:absolute;left:-40px;top:-2px;}
+.tstep h4{margin:0 0 4px;color:#8a6fd0;}
+
+.faq details{background:#faf7ff;border-radius:14px;padding:10px 16px;margin-bottom:9px;border:1px solid #eee0fb;}
+.faq summary{font-weight:700;cursor:pointer;color:#6a4fb0;}
+.faq p{margin:8px 0 0;}
+
+.motivate{text-align:center;font-size:1.15rem;font-weight:800;color:#c23a72;padding:16px;background:var(--pink);
+  border-radius:18px;margin:18px 0;}
+footer{text-align:center;padding:30px;color:var(--inks);font-size:.85rem;}
+.spark{display:inline-block;animation:spin 4s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+</style>
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div><div class="blob b5"></div>
+
+<header>
+  <h1><span class="spark">🌙</span> The Dream Team: You, Me & a PhD</h1>
+  <p>From classroom to corridor dreams — your roadmap, your title, your rules, no fluff. Twenty-two years of turning "confused faces" into "aha!" moments has already trained you for this. Now let's turn "someday, Dr. Shah" into a date on a calendar.</p>
+  <div class="badges">
+    <span class="badge">🧑‍🏫 50 yrs research instinct, distilled</span>
+    <span class="badge">🧠 NLP + Computational Psychiatry</span>
+    <span class="badge">💻 Software-only · 2–3 years</span>
+    <span class="badge">🌍 Built for real social impact</span>
+  </div>
+</header>
+
+<nav id="tabs">
+  <button data-t="verdict" class="active">1. Motivation</button>
+  <button data-t="title">2. The Title</button>
+  <button data-t="map">3. Field Map</button>
+  <button data-t="architecture">4. Your System</button>
+  <button data-t="courses">5. Courses</button>
+  <button data-t="data">6. Datasets & Papers</button>
+  <button data-t="roadmap">7. Roadmap</button>
+  <button data-t="present">8. Panel Day</button>
+  <button data-t="faq">9. Tough Questions</button>
+  <button data-t="fuel">10. Fuel Up</button>
+</nav>
+
+<main>
+
+<!-- 1 MOTIVATION -->
+<section class="panel active" id="verdict">
+  <div class="card">
+    <span class="tag t-pink">Why This Journey Is Worth It</span>
+    <h2>Every big PhD starts as a small, slightly wobbly idea. Yours is a good one.</h2>
+    <p>Every researcher who ever stood in front of a panel and explained a "closed-loop personalized system" once sat exactly where you're sitting — with a stack of papers, a half-formed title, and a nagging voice asking "is this too ambitious? too small? already done?" That voice never fully goes away. What changes is that you learn to keep working anyway, one clear step at a time. Twenty-two years in a classroom already taught you the hardest skill in research: turning something complicated into something a stranger can understand in one sentence. That's 90% of what a PhD panel is actually testing.</p>
+    <div class="callout tip">🌟 <b>Remember this whenever doubt creeps in:</b> a PhD is not one giant leap of genius. It's hundreds of small, honest, well-explained steps stacked on top of each other. You don't need to be the smartest person in the room — you need to be the one who shows up, reads one more paper, and explains it a little more clearly than yesterday.</div>
+  </div>
+
+  <div class="card">
+    <span class="tag t-mint">See It In Action — A Real-Time Example Dialogue</span>
+    <h3>How your future system might actually "talk" to someone</h3>
+    <p>This is the kind of scene you can literally act out for your panel — it makes an abstract architecture diagram suddenly feel real and human.</p>
+    <div class="diagram">
+USER (typing into the app, morning after a bad night):
+"I was running through a dark corridor. Someone was
+ behind me. Every door was locked. I couldn't scream."
+
+  ↓  [NLP / LLM FEATURE EXTRACTION]
+
+SYSTEM (internal profile, not shown to user):
+  Threat: 0.93   Fear: 0.90   Agency: 0.10
+  Helplessness: 0.95   Control: 0.08   Resolution: 0.04
+
+  ↓  [COMPARED AGAINST HER LAST 6 ENTRIES]
+
+SYSTEM (gentle, non-diagnostic, on-screen message):
+"Thank you for sharing that — it sounds distressing.
+ I notice a corridor and a pursuer have appeared in
+ four of your last six entries. Would you like to try
+ a short rescripting exercise, like we did last week?"
+
+USER: "Yes, let's try."
+
+SYSTEM (guided IRT-style prompt, grounded in established therapy):
+"Let's replay the dream, but this time, imagine one
+ small change. What if, at the locked door, you found
+ a light switch instead? Take a moment and picture it."
+
+  ↓  [ONE WEEK LATER — NEW ENTRY]
+
+USER: "Someone was behind me again, but I found a
+ door that opened this time. I didn't get out, but
+ I wasn't as scared."
+
+  ↓  [NLP RE-ANALYSIS]
+
+SYSTEM (internal):
+  Threat: 0.71 (↓)   Agency: 0.46 (↑)   Control: 0.40 (↑)
+  → Nightmare Narrative Transformation detected.
+  → Adapt next suggestion: reinforce "agency" theme,
+     not "safety" theme (already improving on its own).
+    </div>
+    <div class="callout quote">🎬 <b>Panel-ready line to say right after this slide:</b> "This isn't a chatbot giving generic advice — it's a system that remembers her corridor from three weeks ago, notices it's changing, and quietly adjusts what it offers next. That memory-and-adaptation loop is the actual PhD."</div>
+  </div>
+
+  <div class="card">
+    <span class="tag t-butter">A Second Mini-Dialogue — For Your Ethics Slide</span>
+    <p>Panels love seeing that you've thought about the edge cases. Here's a short exchange that shows your safety net in action:</p>
+    <div class="diagram">
+USER: "I dreamed my building collapsed and I couldn't
+ breathe. I've been feeling like this in real life too,
+ like I can't cope anymore."
+
+  ↓  [DISTRESS-SIGNAL CLASSIFIER, separate from the
+      research feature model]
+
+SYSTEM:
+"That sounds really heavy, and I'm glad you told me.
+ I'm not able to provide clinical support myself, but
+ I'd like to share some resources and a way to reach
+ a real person who can help right now. Would that be okay?"
+
+  ↓  [AUTOMATED RESCRIPTING PAUSES]
+  ↓  [HUMAN / CLINICAL ESCALATION PROTOCOL TRIGGERED]
+    </div>
+    <p>This single exchange, on one slide, answers "what about safety?" better than three paragraphs of policy text ever could.</p>
+  </div>
+</section>
+
+<!-- 2 TITLE -->
+<section class="panel" id="title">
+  <div class="card">
+    <span class="tag t-lav">My Title Decision (and why)</span>
+    <h2>🏆 Computational Modeling of Nightmare Narratives for Personalized, Adaptive Well-Being Support</h2>
+    <p>I deliberately reshaped the title you'd converged on. Here's my reasoning, word by word:</p>
+    <table>
+      <tr><th>Word</th><th>Why it's there</th></tr>
+      <tr><td>Computational Modeling</td><td>Signals a real technical/mathematical contribution — not just "using AI," which sounds like a tool choice, not research.</td></tr>
+      <tr><td>Nightmare Narratives</td><td>Bounded, concrete, defensible scope. Not "dreams" (too broad), not "sleep" (too medical).</td></tr>
+      <tr><td>Personalized, Adaptive</td><td>Your actual novelty — the system learns and changes per person, over time. This is the sentence a panelist will remember.</td></tr>
+      <tr><td>Well-Being Support</td><td>I swapped "Intervention" for "Support" on purpose — "intervention" sounds clinical/medical and invites "are you a therapist?" questions. "Support" is honest, humble, and safer.</td></tr>
+    </table>
+    <div class="callout tip">💡 <b>My call, differing slightly from the earlier drafts:</b> I'd rather you under-promise with "support" than over-promise with "intervention," even though intervention is more common in the literature. A panel is more likely to approve a modest, precise title than an ambitious, clinical-sounding one from a non-clinician. You can always use "intervention" inside chapters once you have ethics sign-off and clinical collaborators attached to your name.</div>
+    <div class="grid3">
+      <div class="mini"><h4>🧩 Pillar 1</h4><b>Understand</b> — build the Nightmare Narrative Profile (NLP feature set).</div>
+      <div class="mini"><h4>🌱 Pillar 2</h4><b>Track</b> — Nightmare Narrative Transformation across weeks (your signature construct).</div>
+      <div class="mini"><h4>🎯 Pillar 3</h4><b>Adapt</b> — a personalization engine that changes its suggestion based on the trend.</div>
+    </div>
+    <p style="margin-top:14px;"><b>Frontier (kept explicitly optional):</b> exploratory, software-only pre-sleep cueing to see if it nudges dream content — framed honestly as a curiosity experiment, not a promise.</p>
+  </div>
+</section>
+
+<!-- 3 FIELD MAP -->
+<section class="panel" id="map">
+  <div class="card">
+    <span class="tag t-sky">Where the Field Actually Stands (my map, not a copy-paste)</span>
+    <div class="diagram">
+                       DREAM + AI RESEARCH, 2026
+                               |
+        +----------------------+-----------------------+
+        |                      |                        |
+   UNDERSTAND               TREAT                    INFLUENCE
+   (NLP reads dreams)   (therapy gets digital)   (can we nudge content?)
+        |                      |                        |
+   DreamBank, DReAMy      IRT, DreamMend,          Dormio Light,
+   emotion/topic tools    DreamDirector             Targeted Incubation
+        |                      |                        |
+        +----------------------+-----------------------+
+                               |
+                    NOBODY IS DOING THIS WELL:
+              "track ONE person's nightmare story
+               across many nights, and let THAT
+               change steer what happens next"
+                               |
+                               v
+                        >>> YOUR PhD <<<
+    </div>
+    <p>Three studies you must know cold — because a panelist who's read even one abstract will ask about them:</p>
+    <table>
+      <tr><th>Study</th><th>1-line summary</th><th>Why it's not your PhD (yet)</th></tr>
+      <tr><td><b>DreamMend</b> (2026)</td><td>AI chatbot walks a person through IRT rewriting</td><td>No memory across weeks — each session stands alone</td></tr>
+      <tr><td><b>DreamDirector</b> (2025)</td><td>Generative AI helps <i>therapists</i>, not patients directly</td><td>Therapist-tool, not a self-adapting patient-facing system</td></tr>
+      <tr><td><b>Perogamvros et al.</b> (2025)</td><td>LLM sorts dreams into 5 categories (nightmare/cathartic/etc.)</td><td>A label per dream, not a trend across dreams</td></tr>
+    </table>
+    <div class="callout me">🧑‍🏫 <b>My addition — nobody flagged this clearly enough:</b> always separate "peer-reviewed" from "preprint/very-recent" in your literature table. Several sources dated 2026 need a personal Google Scholar check before your final submission — I did not verify every single one myself, and neither should you assume they're all airtight. A panel loves a candidate who says "this is preprint-level, treat cautiously" — it signals real scholarly maturity.</div>
+  </div>
+</section>
+
+<!-- 4 ARCHITECTURE -->
+<section class="panel" id="architecture">
+  <div class="card">
+    <span class="tag t-mint">Your System, Explained Like a Story</span>
+    <h2>The "Priya" Story (open your talk with this)</h2>
+    <div class="callout quote">Priya has the same nightmare, roughly, for two years: a dark corridor, someone behind her, no way out. Today, if she tells her therapist, the therapist remembers "roughly" what she said last time. My system remembers <i>exactly</i> — and three weeks ago, for the first time, Priya's dream-self found a door. That's not poetry. That's a number: <code>agency 0.12 → 0.51</code>. That number is therapeutic progress showing up in the data <i>before</i> Priya would even say she feels better.</div>
+    <h3>The Architecture (memorize this, draw it by hand)</h3>
+    <div class="diagram">
+   NIGHTMARE REPORT (plain text)
+           |
+           v
+   NLP / LLM FEATURE EXTRACTION
+           |
+   +-------+-------+-------+
+   |       |       |       |
+ Threat  Emotion Agency  Resolution   ...(8 dimensions total)
+   |       |       |       |
+   +-------+-------+-------+
+           |
+           v
+   NIGHTMARE NARRATIVE PROFILE  (one snapshot)
+           |
+           v
+   LONGITUDINAL TRACKER  <-------------------+
+           |                                 |
+           v                                 |
+   NIGHTMARE NARRATIVE TRANSFORMATION (NNT)   |
+           |                                 |
+   +-------+-------+                         |
+   |               |                         |
+ PREDICT        ADAPT                        |
+ (will this   (choose next                   |
+  person       rescripting                   |
+  improve?)    focus)------------------> NEW NIGHTMARE
+           |
+           v
+   SLEEP + WELL-BEING OUTCOME (validated scales, not AI guesses)
+           |
+           v
+   [OPTIONAL, HONEST] exploratory software-only pre-sleep nudge
+    </div>
+    <h3>Your 4 Deliverables (say these in order, every time)</h3>
+    <div class="grid2">
+      <div class="mini"><h4>1️⃣ Nightmare Narrative Profile</h4>The computational fingerprint: threat, fear, agency, helplessness, control, social support, recurrence, resolution.</div>
+      <div class="mini"><h4>2️⃣ Nightmare Narrative Transformation</h4>How that fingerprint moves over weeks — your original, ownable construct.</div>
+      <div class="mini"><h4>3️⃣ Adaptive Support Engine</h4>Uses the trend to decide what rescripting focus to suggest next.</div>
+      <div class="mini"><h4>4️⃣ Exploratory Nudge (Phase III)</h4>Bonus round — software-only, low-stakes, "let's see" experiment.</div>
+    </div>
+    <div class="callout tip">🛡️ Why this order matters: if #4 fails, you still hand in a full PhD. Never let your riskiest idea be your only idea.</div>
+  </div>
+</section>
+
+<!-- 5 COURSES -->
+<section class="panel" id="courses">
+  <div class="card">
+    <span class="tag t-peach">My Curated Course List (yes, including dream/sleep-specific ones)</span>
+    <p>You already teach NLP, so I've skipped baby-steps content. This list fills the exact gaps between "NLP professor" and "computational-psychiatry PhD candidate."</p>
+    <table>
+      <tr><th>Course</th><th>Why <i>you</i>, specifically, need it</th><th>Cost</th><th>Link</th></tr>
+      <tr><td><b>NLP Specialization</b> — DeepLearning.AI</td><td>Refresh transformer/sequence-model fluency; this is literally your feature-extraction toolbox</td><td>Free audit / paid cert</td><td><a class="btn" href="https://www.coursera.org/specializations/natural-language-processing" target="_blank">Go ↗</a></td></tr>
+      <tr><td><b>Generative AI with Large Language Models</b> — DeepLearning.AI + AWS</td><td>Prompting & fine-tuning LLMs — exactly how DreamMend/DreamDirector-style systems are built</td><td>Free audit / paid cert</td><td><a class="btn" href="https://www.coursera.org/learn/generative-ai-with-llms" target="_blank">Go ↗</a></td></tr>
+      <tr><td><b>Sleep: Neurobiology, Medicine and Society</b> — University of Michigan</td><td>You need the vocabulary to talk credibly with sleep-medicine collaborators and your ethics committee</td><td>Free audit</td><td><a class="btn" href="https://www.coursera.org/learn/sleep" target="_blank">Go ↗</a></td></tr>
+      <tr><td><b>The Science of Well-Being</b> — Yale (Laurie Santos)</td><td>Yale's most popular course ever — gives you the well-being/outcome-measurement literacy your secondary outcomes need, and it's genuinely delightful</td><td>Free</td><td><a class="btn" href="https://www.coursera.org/learn/the-science-of-well-being" target="_blank">Go ↗</a></td></tr>
+      <tr><td><b>Writing in the Sciences</b> — Stanford</td><td>Your proposal must read like clean, confident science — this is the best free course for that, period</td><td>Free</td><td><a class="btn" href="https://www.coursera.org/learn/sciwrite" target="_blank">Go ↗</a></td></tr>
+      <tr><td><b>Good Research Practices</b> — University of Cape Town</td><td>Reproducibility, research design discipline — panels notice when a candidate has this vocabulary</td><td>Free audit</td><td><a class="btn" href="https://www.coursera.org/learn/good-research-practices" target="_blank">Go ↗</a></td></tr>
+      <tr><td><b>Improving your Statistical Questions</b> — Eindhoven University</td><td>Precisely frames "association vs. prediction vs. causation" — you'll need this exact distinction for RQ3–RQ5</td><td>Free audit</td><td><a class="btn" href="https://www.coursera.org/learn/improving-statistical-questions" target="_blank">Go ↗</a></td></tr>
+      <tr><td><b>Systematic Review methodology</b> — search "systematic review" on Coursera</td><td>You need a proper PRISMA-style literature chapter, not just an AI-generated table</td><td>Free audit / paid cert</td><td><a class="btn" href="https://www.coursera.org/learn/systematic-review" target="_blank">Go ↗</a></td></tr>
+    </table>
+    <div class="callout me">🧑‍🏫 <b>My own addition:</b> I deliberately included the Yale well-being course — nobody in your earlier notes mentioned it, but your secondary outcome is literally "well-being," and you should personally experience a validated well-being curriculum before you start measuring it in strangers. Also — it's genuinely joyful, and joy is fuel for a 3-year PhD.</div>
+    <p><b>Suggested order:</b> Writing in the Sciences (quick early win) → Good Research Practices → NLP refresh → Sleep course (light, parallel) → Science of Well-Being (parallel, for balance) → Generative AI with LLMs → Systematic Review (right before your lit-review chapter) → Statistics course (right before Phase 2 analysis).</p>
+  </div>
+</section>
+
+<!-- 6 DATA & PAPERS -->
+<section class="panel" id="data">
+  <div class="card">
+    <span class="tag t-sky">Public Datasets — Start Here, Not With 500 Participants</span>
+    <table>
+      <tr><th>Resource</th><th>Size</th><th>Use for</th><th>Link</th></tr>
+      <tr><td>DreamBank</td><td>~22,000–38,000 dream reports</td><td>Your primary NLP development + benchmarking corpus</td><td><a class="btn" href="https://dreambank.net/" target="_blank">Site ↗</a></td></tr>
+      <tr><td>DReAMy (annotated DreamBank + code)</td><td>~22k EN reports, models included</td><td>Reproducible emotion-annotation baseline</td><td><a class="btn" href="https://github.com/lorenzoscottb/Dream_Reports_Annotation" target="_blank">GitHub ↗</a></td></tr>
+      <tr><td>DreamBank Zenodo mirror</td><td>Full archive</td><td>Stable offline copy</td><td><a class="btn" href="https://zenodo.org/records/18159468" target="_blank">Zenodo ↗</a></td></tr>
+      <tr><td>Reddit r/Dreams corpus (Das et al. 2025)</td><td>44,213 reports</td><td>Large-scale recurring-theme mining, robustness testing</td><td><a class="btn" href="https://link.springer.com/article/10.1140/epjds/s13688-025-00554-w" target="_blank">Paper ↗</a></td></tr>
+      <tr><td><b>Your own longitudinal diary</b></td><td>Build after ethics approval</td><td>Nightmare + distress + intervention + outcome per person, over weeks — this becomes your biggest original contribution</td><td>🌟 Design it in Year 1</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <span class="tag t-lav">First Reading Stack (verify each yourself before citing)</span>
+    <div class="callout warn">🔍 I'm being upfront: I have not personally re-verified every single citation below against the live journal page — several are dated as late as 2026 in your materials. Before your written proposal is final, open each on Google Scholar / PubMed / CrossRef yourself. That habit alone will save you an awkward panel moment.</div>
+    <table>
+      <tr><th>#</th><th>Paper</th><th>Why</th><th>Link</th></tr>
+      <tr><td>1</td><td>Fogli, Aiello & Quercia (2020) — <i>Royal Society Open Science</i></td><td>Foundational computational dream analysis</td><td><a class="btn" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7481704/" target="_blank">Free PDF ↗</a></td></tr>
+      <tr><td>2</td><td>Krakow et al. (2001) — <i>JAMA</i></td><td>The IRT randomized-trial foundation</td><td><a class="btn" href="https://jamanetwork.com/journals/jama/fullarticle/194063" target="_blank">Paper ↗</a></td></tr>
+      <tr><td>3</td><td>Bertolini et al. (2024) — CLPsych Workshop</td><td>Closest existing NLP work to your feature layer</td><td><a class="btn" href="https://aclanthology.org/2024.clpsych-1.7.pdf" target="_blank">Free PDF ↗</a></td></tr>
+      <tr><td>4</td><td>Baber et al. (2024) — <i>Sleep</i></td><td>Proves plain sentiment analysis isn't enough — justifies your richer features</td><td><a class="btn" href="https://academic.oup.com/sleep/article/47/12/zsae210/7754282" target="_blank">Paper ↗</a></td></tr>
+      <tr><td>5</td><td>Domhoff & Schneider (2008) — DreamBank paper</td><td>Cite this whenever you use DreamBank</td><td><a class="btn" href="https://dreamresearch.adamschneider.net/Library/domhoff_2008c.html" target="_blank">Info ↗</a></td></tr>
+      <tr><td>6</td><td>Gill et al. (2023) — <i>BMC Psychiatry</i>, 69-study review</td><td>Your evidence base that nightmare psychotherapy works</td><td><a class="btn" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10122409/" target="_blank">Free PDF ↗</a></td></tr>
+      <tr><td>7</td><td>Voss et al. — DreamMend RCT, <i>Somnologie</i></td><td>Know this one cold — it's your closest competitor</td><td><a class="btn" href="https://link.springer.com/article/10.1007/s11818-026-00550-w" target="_blank">Open access ↗</a></td></tr>
+      <tr><td>8</td><td>Perogamvros et al. — "The cathartic dream," <i>J Sleep Research</i></td><td>LLM dream-type classifier — precedent for validating your own model</td><td><a class="btn" href="https://onlinelibrary.wiley.com/doi/10.1111/jsr.70001" target="_blank">Paper ↗</a></td></tr>
+      <tr><td>9</td><td>Bellaiche et al. (2024) — Dormio Light, <i>Frontiers in Sleep</i></td><td>Proof no-hardware dream incubation is possible — your Phase III foundation</td><td><a class="btn" href="https://www.frontiersin.org/journals/sleep/articles/10.3389/frsle.2024.1258345/full" target="_blank">Free PDF ↗</a></td></tr>
+      <tr><td>10</td><td>Mallett et al. (2024) — cognitive science of dreaming review</td><td>Cite to show your topic is scientifically timely, not fringe</td><td><a class="btn" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11623913/" target="_blank">Free PDF ↗</a></td></tr>
+    </table>
+    <div class="grid3" style="margin-top:14px;">
+      <div class="mini"><h4>PubMed / PMC</h4>Filter "Free Full Text" for nightmare + NLP searches.<br><a class="btn" href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">Go ↗</a></div>
+      <div class="mini"><h4>ACL Anthology</h4>Every NLP conference paper, always free.<br><a class="btn" href="https://aclanthology.org/" target="_blank">Go ↗</a></div>
+      <div class="mini"><h4>arXiv</h4>Latest LLM/AI preprints — mark these clearly as "preprint" in your table.<br><a class="btn" href="https://arxiv.org/" target="_blank">Go ↗</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 ROADMAP -->
+<section class="panel" id="roadmap">
+  <div class="card">
+    <span class="tag t-butter">Click as you go — your living roadmap ✅</span>
+    <div class="progress-wrap"><div class="progress-bar" id="pbar"></div></div>
+    <div class="plabel" id="plabel">0% — let's begin 🌱</div>
+    <ul class="checklist" id="clist">
+      <li><input type="checkbox"><span>📖 Hand-read 40–50 raw DreamBank nightmares — no AI, just you and the text (my personal recommendation, do this FIRST)</span></li>
+      <li><input type="checkbox"><span>📚 Read the 10 core papers (Tab 6) and build your own paper-tracking sheet</span></li>
+      <li><input type="checkbox"><span>🎓 Start "Writing in the Sciences" + "Good Research Practices"</span></li>
+      <li><input type="checkbox"><span>🏷️ Freeze the title (Tab 2) and write it on a sticky note above your desk</span></li>
+      <li><input type="checkbox"><span>🗺️ Rewrite the research-gap paragraph in your own words — don't copy anyone's, including mine</span></li>
+      <li><input type="checkbox"><span>🖼️ Redraw the architecture diagram (Tab 4) by hand from memory</span></li>
+      <li><input type="checkbox"><span>📝 Write your own version of the 4 objectives + 6 research questions</span></li>
+      <li><input type="checkbox"><span>🎤 Practice the "Priya" opening story out loud 5 times</span></li>
+      <li><input type="checkbox"><span>📊 Build the approval slide deck (10 slides, Tab 8 structure)</span></li>
+      <li><input type="checkbox"><span>🧪 Run a mock presentation with a colleague; collect their toughest questions</span></li>
+      <li><input type="checkbox"><span>🏛️ Submit for panel approval</span></li>
+      <li><input type="checkbox"><span>🔐 Prepare Ethics Committee documents: consent form, privacy plan, distress-escalation protocol</span></li>
+      <li><input type="checkbox"><span>🧑‍💻 Build your NLP feature-extraction pipeline on DreamBank (start coding!)</span></li>
+      <li><input type="checkbox"><span>📈 Run pilot annotation with 2–3 human raters; compute Cohen's/Fleiss' kappa</span></li>
+      <li><input type="checkbox"><span>👥 Recruit a small longitudinal pilot group (post-ethics-approval)</span></li>
+      <li><input type="checkbox"><span>📄 Draft Paper 1 (NLP methodology) and submit to a workshop</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <span class="tag t-mint">3-Year Plan at a Glance</span>
+    <table>
+      <tr><th>Year</th><th>Focus</th><th>Key Output</th></tr>
+      <tr><td>Year 1</td><td>Literature + NLP pipeline + annotation schema + ethics prep</td><td>Systematic-review paper + NLP methodology paper</td></tr>
+      <tr><td>Year 2</td><td>Longitudinal pilot + Nightmare Narrative Transformation model</td><td>Longitudinal modeling paper</td></tr>
+      <tr><td>Year 3</td><td>Adaptive-support study + exploratory Phase III + thesis writing</td><td>Adaptive-intervention paper + thesis + viva</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- 8 PANEL DAY -->
+<section class="panel" id="present">
+  <div class="card">
+    <span class="tag t-pink">How to Present — My 10-Slide Structure</span>
+    <ol>
+      <li><b>Title slide</b> — your title + a one-line human hook.</li>
+      <li><b>The Problem</b> — nightmares, sleep, well-being; one relatable image.</li>
+      <li><b>What Already Exists</b> — the 3-branch field map (Tab 3); show you know DreamMend/DreamDirector by name.</li>
+      <li><b>The Gap</b> — one paragraph, one unforgettable sentence.</li>
+      <li><b>Your Framework</b> — the architecture diagram, told as the Priya story.</li>
+      <li><b>Objectives & Methodology</b> — 4 objectives max on-screen.</li>
+      <li><b>Ethics & Scope</b> — in-scope / out-of-scope boundary, shows discipline.</li>
+      <li><b>3-Year Plan</b> — 3 rows, no more.</li>
+      <li><b>Expected Contributions</b> — 4 one-line bullets.</li>
+      <li><b>Thank-you + "Questions I'd love to discuss"</b> — invites dialogue, not interrogation.</li>
+    </ol>
+    <div class="callout tip">🎨 One idea per slide. If you can explain a slide without looking at it, you've earned it.</div>
+  </div>
+</section>
+
+<!-- 9 FAQ -->
+<section class="panel" id="faq">
+  <div class="card">
+    <span class="tag t-sky">Tough Panel Questions — Rehearsed Answers</span>
+    <div class="faq">
+      <details><summary>"Isn't this just another AI chatbot for nightmares?"</summary><p>"DreamMend proves AI-assisted digital IRT is feasible. My contribution goes deeper — a longitudinal model of how the nightmare narrative itself transforms over weeks, and using that trend to adapt support. A single chatbot session has no memory of last month; my system does."</p></details>
+      <details><summary>"Can you really influence dreams?"</summary><p>"I wouldn't claim that as a promise. Small pilot studies show software-only cues can nudge dream content in some cases — I treat this as an honest, exploratory Phase III, clearly separated from my core, deliverable thesis."</p></details>
+      <details><summary>"Are you diagnosing mental illness from dream text?"</summary><p>"No. The AI extracts non-diagnostic research features. Clinical outcomes come from validated questionnaires, and any distress signal triggers a human escalation protocol — never an automated diagnosis."</p></details>
+      <details><summary>"How will you get participants?"</summary><p>"Public datasets like DreamBank first, for NLP development. Then a modest longitudinal pilot with sample size set by formal power analysis after the pilot's effect sizes, then a larger study in Year 3."</p></details>
+      <details><summary>"You're not a psychologist — why should we trust this?"</summary><p>"Exactly why the system is positioned as decision-support, developed alongside psychology/sleep-medicine collaborators and under ethics oversight — not a clinical replacement."</p></details>
+      <details><summary>"What if your exploratory experiment fails?"</summary><p>"Then my three core contributions — the Profile, the Transformation model, and the Adaptive engine — still stand as a complete, publishable PhD. Phase III is a bonus, never a dependency."</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 10 FUEL -->
+<section class="panel" id="fuel">
+  <div class="card">
+    <span class="tag t-butter">A Note From Me, Your Guide</span>
+    <p>I've watched hundreds of candidates start this exact climb. The ones who finish aren't the smartest in the room — they're the ones who show up on the boring Tuesday when nothing feels exciting, and read one more paper anyway. Twenty-two years of walking into a classroom and making hard things simple for other people? That's the entire skillset a good researcher needs, aimed at a new question.</p>
+    <div class="motivate">🌙 You are not new to hard, disciplined work. You are only new to doing it for yourself, on your own question. That's the whole shift. ✨</div>
+    <p>Some weeks the literature will feel enormous and the deadline will feel small. On those weeks: don't try to finish the PhD. Check one box on the roadmap. Read one paper. Rewrite one paragraph in your own words. That is the entire job, one small honest step at a time — and I'll be exactly this direct with you the whole way.</p>
+    <div class="callout me">🍀 My personal ritual suggestion: after every roadmap box, say out loud, "One step closer, Dr. Shah." Feels silly. Works anyway. Go.</div>
+  </div>
+</section>
+
+</main>
+
+<footer>Built by your PhD guide — my own read, my own title, my own roadmap. Verify every citation yourself before final submission. Now go read that first dream report. 🌸</footer>
+
+<script>
+const tabs=document.querySelectorAll('nav button'), panels=document.querySelectorAll('.panel');
+tabs.forEach(b=>b.addEventListener('click',()=>{
+  tabs.forEach(x=>x.classList.remove('active')); panels.forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); document.getElementById(b.dataset.t).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}));
+const clist=document.getElementById('clist'), pbar=document.getElementById('pbar'), plabel=document.getElementById('plabel');
+function upd(){
+  const items=clist.querySelectorAll('li'), checked=clist.querySelectorAll('input:checked').length;
+  const pct=Math.round((checked/items.length)*100); pbar.style.width=pct+'%';
+  let msg='0% — let\'s begin 🌱';
+  if(pct>=100) msg='100% — PANEL READY! 🎉🌙';
+  else if(pct>=70) msg='Almost there, Dr. Shah! 🎓';
+  else if(pct>=40) msg='Halfway — unstoppable! 🌸';
+  else if(pct>0) msg='Great start — keep going! 🌿';
+  plabel.textContent=pct+'% — '+msg.split('— ')[1];
+}
+clist.querySelectorAll('li').forEach(li=>li.addEventListener('click',e=>{
+  const cb=li.querySelector('input'); if(e.target.tagName.toLowerCase()!=='input') cb.checked=!cb.checked;
+  li.classList.toggle('done',cb.checked); upd();
+}));
+upd();
+</script>
+</body>
+</html>
